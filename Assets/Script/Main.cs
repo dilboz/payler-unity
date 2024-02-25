@@ -1,7 +1,5 @@
-using System;
 using Script.Server.Routs.Tariff;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Script
 {
