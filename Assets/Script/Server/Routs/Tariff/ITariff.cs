@@ -5,6 +5,6 @@ namespace Script.Server.Routs.Tariff
 {
     public interface ITariff
     {
-        public Task<List<Model.Tariff.Tariff>> GetTariffs();
+        public List<Model.Tariff.Tariff> GetTariffs();
     }
 }

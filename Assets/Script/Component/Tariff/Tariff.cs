@@ -5,7 +5,7 @@ namespace Script.Component.Tariff
 {
     public class Tariff: MonoBehaviour
     {
-        [SerializeField] private Text name;
+        [SerializeField] private new Text name;
 
         public int Id
         {
@@ -17,6 +17,13 @@ namespace Script.Component.Tariff
         {
             get => name.text;
             set => name.text = value;
+        }
+
+        public int Price { get; set; }
+
+        public ToggleGroup ToggleGroup
+        {
+            set => gameObject.GetComponent<Toggle>().group = value;
         }
     }
 }
