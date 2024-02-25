@@ -30,5 +30,10 @@ namespace Script.Component.Tariff
         {
             set => gameObject.GetComponent<Toggle>().isOn = value;
         }
+
+        public void SetPrice()
+        {
+            Main.SetPrice(Price);
+        }
     }
 }

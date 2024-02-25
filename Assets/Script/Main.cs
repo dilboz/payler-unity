@@ -11,6 +11,8 @@ namespace Script
 
         private Tariff _tariff;
 
+        private static int _selectPrice;
+
         public void Start()
         {
             _tariff = gameObject.AddComponent<Tariff>();
@@ -29,9 +31,17 @@ namespace Script
                 tariffObject.Price = tariff.Price;
                 tariffObject.ToggleGroup = listTariff.GetComponent<ToggleGroup>();
                 tariffObject.ToggleStatus = isFirst;
-
+                _selectPrice = tariff.Price;
+                
                 isFirst = false;
             }
+        }
+
+        public static void SetPrice(int price)
+        {
+            _selectPrice = price;
+            
+            print("price: " + price);
         }
     }
 }
