@@ -25,5 +25,10 @@ namespace Script.Component.Tariff
         {
             set => gameObject.GetComponent<Toggle>().group = value;
         }
+
+        public bool ToggleStatus
+        {
+            set => gameObject.GetComponent<Toggle>().isOn = value;
+        }
     }
 }

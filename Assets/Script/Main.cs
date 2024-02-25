@@ -18,6 +18,7 @@ namespace Script
             //get all tariff
             var tariffs = _tariff.GetTariffs();
 
+            var isFirst = true;
             //print name tariffs
             foreach (var tariff in tariffs)
             {
@@ -26,8 +27,10 @@ namespace Script
                 tariffObject.Id = tariff.Id;
                 tariffObject.Name = tariff.Name;
                 tariffObject.Price = tariff.Price;
-
                 tariffObject.ToggleGroup = listTariff.GetComponent<ToggleGroup>();
+                tariffObject.ToggleStatus = isFirst;
+
+                isFirst = false;
             }
         }
     }
